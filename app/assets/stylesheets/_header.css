@@ -64,6 +64,9 @@
     width: 150px;
     margin-right: 0;
   }
+  .header__sign-link-section li {
+    padding: 3px 5px;
+  }
   .login-button, .sign-button {
     font-size: 0.8rem;
   }
