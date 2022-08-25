@@ -1,0 +1,70 @@
+.header__container {
+  border-bottom: 1px solid #DCDCDC;
+  background-color: white;
+  height: 100px;
+}
+.header__row {
+  margin: auto 12vw;
+  height: 100px;
+  text-align: center;
+  justify-content: space-between;
+}
+.row-size {
+  width: 33.3%;
+}
+
+
+
+/* ヘッダータイトル */
+.header__title img {
+  width: 300px;
+  align-self: flex-start;
+}
+
+
+/* ヘッダーアカウントボタン */
+.header__sign-link-section ul {
+  justify-content: end;
+}
+.header__sign-link-section .login-button {
+  margin-right: 3vw;
+}
+.header__sign-link-section .login-button, .header__sign-link-section .sign-button {
+  background-color: #00CC99;
+  border-color: #00CC99;
+}
+.header__sign-link-section li {
+  text-align: center;
+  padding: 7px 15px;
+  font-weight: bold;
+}
+.header__sign-link-section li a {
+  color: white;
+}
+
+
+@media screen and (max-width: 1230px) {
+  .header__row {
+    margin: auto;
+    padding: 20px;
+  }
+} 
+
+
+
+@media screen and (max-width: 750px) {
+  .header__row {
+    justify-content: space-between;
+    padding: 10px 10px;
+  }
+  .row-size {
+    width: auto;
+  }
+  .header__title {
+    width: 150px;
+    margin-right: 0;
+  }
+  .login-button, .sign-button {
+    font-size: 0.8rem;
+  }
+}

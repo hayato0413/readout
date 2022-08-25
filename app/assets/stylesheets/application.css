@@ -13,3 +13,36 @@
  *= require_tree .
  *= require_self
  */
+ html {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+ul {
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+body {
+  background-color: #eeeeee;
+}
+
+.button {
+  border: 1px solid;
+  border-radius: 1.2rem;
+}
+.button-hover:hover {
+  opacity: 0.7;
+  transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-o-transition: 0.5s;
+}
+.flex {
+  display: flex;
+  align-items: center;
+}
