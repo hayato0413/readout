@@ -1,0 +1,87 @@
+.post__container {
+  border: 2px solid #DCDCDC;
+  padding: 20px 40px;
+  margin-top: 10px;
+}
+.post__content-url:hover .post__container{
+  border-color: #00cc99;
+  opacity: 0.5;
+}
+
+
+
+/* 投稿タイトル */
+.post__title-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.post__title h2{
+  max-width: 350px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.post__user-row {
+  display: flex;
+  align-items: center;
+}
+.post__user-img {
+  padding-right: 15px;
+}
+.post__user-img img{
+  width: 2rem;
+  height: 2rem;
+  border-radius: 1.25rem;
+  object-fit: cover;
+}
+
+
+
+/* 投稿評価 */
+.post__evaluation-section {
+  margin-bottom: 40px;
+}
+.post__evaluation-section p {
+  padding-bottom: 5px;
+  display: inline;
+  border-bottom: 2px solid #dcdcdc;
+}
+.post__evaluation-section span {
+  color: gold;
+  font-size: 1.2em;
+}
+
+
+
+/* 投稿カテゴリー */
+.post__category-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 40px;
+}
+.post__category-section p {
+  margin-right: 5px;
+  color: #00cc99;
+}
+
+
+
+@media screen and (max-width: 750px) {
+  .post__title-section {
+    flex-direction: column;
+  }
+  .post__category-section {
+    justify-content: center;
+  }
+  .post__user-row {
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .post__evaluation-section {
+    white-space: nowrap;
+    text-align: center;
+  }
+}
