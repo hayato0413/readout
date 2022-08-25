@@ -53,9 +53,13 @@
 
 
 @media screen and (max-width: 750px) {
+  .header__container {
+    height: 60px;
+  }
   .header__row {
     justify-content: space-between;
-    padding: 10px 10px;
+    padding: 0 10px;
+    height: 60px;
   }
   .row-size {
     width: auto;
