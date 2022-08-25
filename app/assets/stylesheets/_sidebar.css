@@ -33,7 +33,6 @@
   margin-left: 3px;
 }
 .fa-book::before {
-  /* margin-right: 0!important; */
   margin-right: 10px;
 }
 
@@ -120,5 +119,31 @@
   .hover-border:hover {
     border-bottom: 5px solid #00cc99;
     border-right: unset;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .readout-button {
+    position: absolute;
+    bottom: 70px;
+    right: 30px;
+    
+  }
+  .readout-button li {
+    padding: 30px;
+  }
+  .fa-book::before {
+    position: absolute;
+    bottom: 40px;
+    right: 18px;
+    z-index: 5;
+    font-size: 30px;
+  }
+  .sidebar__menu-list a {
+    margin-top: 6px;
+    margin-right: 8%;
+  }
+  .sidebar__menu-list a:nth-child(4) {
+    margin-right: 0;
   }
 }
