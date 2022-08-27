@@ -10,7 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_08_17_212244) do
+ActiveRecord::Schema.define(version: 2022_08_27_170130) do
+
+  create_table "categories", charset: "utf8mb4", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "post_category_relations", charset: "utf8mb4", force: :cascade do |t|
+    t.bigint "post_id"
+    t.bigint "category_id"
+    t.index ["category_id"], name: "index_post_category_relations_on_category_id"
+    t.index ["post_id"], name: "index_post_category_relations_on_post_id"
+  end
 
   create_table "posts", charset: "utf8mb4", force: :cascade do |t|
     t.string "title", limit: 40, default: "", null: false
