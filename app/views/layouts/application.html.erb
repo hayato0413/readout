@@ -7,8 +7,6 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all'%>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jscroll/2.4.1/jquery.jscroll.min.js"></script>
     
     <link rel="stylesheet"href="https://unpkg.com/modern-css-reset/dist/reset.min.css"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
@@ -18,5 +16,7 @@
   <body>
     <%= render 'layouts/header' %>
     <%= render 'layouts/main' %>
+    <%= render 'layouts/post_create'%>
   </body>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 </html>
