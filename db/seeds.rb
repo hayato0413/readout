@@ -163,3 +163,53 @@ Post.create(
   publish:        '不思議舎',
   evaluation:     4
 )
+
+
+Category.create(
+  name:           '小説'
+)
+Category.create(
+  name:           'ビジネス'
+)
+Category.create(
+  name:           'スポーツ'
+)
+Category.create(
+  name:           '漫画'
+)
+Category.create(
+  name:           'コンピュータ'
+)
+Category.create(
+  name:           'ノンフィクション'
+)
+Category.create(
+  name:           'ミステリー'
+)
+Category.create(
+  name:           'ライトノベル'
+)
+Category.create(
+  name:           '科学'
+)
+Category.create(
+  name:           '教育'
+)
+Category.create(
+  name:           '子育て'
+)
+Category.create(
+  name:           '政治'
+)
+Category.create(
+  name:           '自叙伝'
+)
+Category.create(
+  name:           '料理'
+)
+Category.create(
+  name:           '歴史'
+)
+Category.create(
+  name:           'アート'
+)

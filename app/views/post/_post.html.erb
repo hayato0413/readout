@@ -25,9 +25,9 @@
         <p><%= post.content %></p>
       </div>
       <div class="post__category-section">
-        <p># カテゴリー</p>
-        <p># カテゴリー</p>
-        <p># カテゴリー</p>
+       <% post.categories.each do |category| %>
+          <p># <%= category.name %></p>
+        <% end %>
       </div>
     </div>
   <% end %>
