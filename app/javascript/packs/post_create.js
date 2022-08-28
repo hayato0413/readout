@@ -1,9 +1,9 @@
 function readoutBtn() {
   const flag = document.getElementById("readout")
-  if (flag.style.visibility == 'hidden') {
-    flag.style.visibility = "visible";
+  if (flag.style.display == 'none') {
+    flag.style.display = "block";
   } else {
-    flag.style.visibility = "hidden";
+    flag.style.display = 'none';
   }
 }
 

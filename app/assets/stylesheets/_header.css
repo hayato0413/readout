@@ -43,10 +43,136 @@
 }
 
 
+/* ヘッダーアカウント */
+.header__account-section {
+  justify-content: end;
+}
+.header__account-content {
+  font-weight: bold;
+  margin-right: 25px;
+}
+.header__account-content img {
+  border-radius: 1.5rem;
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+  object-fit: cover;
+}
+
+/* ハンバーガーメニュー */
+.header__nav {
+  position: absolute;
+  right: -1%;
+  top: 100px;
+  width: 15%;
+  height: calc(100% - 100px);
+  transform: translateX(100%);
+  background-color: #00CC99;
+  transition: ease .4s;
+  border: 1px solid #dcdcdc;
+  padding-top: 50px;
+  z-index: 2;
+}
+.header__nav h3 {
+  color: white;
+  border-bottom: 4px solid white;
+  margin: 0 30px;
+  white-space: nowrap;
+}
+.nav-items {
+  position: absolute;
+  top: 170px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0;
+  white-space: nowrap;
+}
+.nav-items li {
+  list-style: square;
+  color: white;
+}
+.nav-items__item a {
+  color: white;
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 24px;
+  padding-bottom: 5px;
+  text-align: left;
+}
+.nav-items__item:last-child a {
+  margin-bottom: 0;
+}
+.nav-items__item a:hover {
+  border-bottom: 3px solid white;
+}
+
+
+
+/* ハンバーガーメニューアイコン*/
+.header__hamburger {
+  width: 48px;
+  height: 100%;
+}
+.hamburger {
+  background-color: transparent;
+  border-color: transparent;
+  z-index: 9999;
+}
+.hamburger span {
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+  position: relative;
+  transition: ease .4s;
+  display: block;
+}
+.hamburger span:nth-child(1) {
+  top: 0;
+}
+.hamburger span:nth-child(2) {
+  margin: 8px 0;
+}
+.hamburger span:nth-child(3) {
+  top: 0;
+}
+
+
+
+/* ハンバーガーメニュークリック後のスタイル */
+.header__nav.active {
+  transform: translateX(0);
+  /* width: 60px; */
+}
+.hamburger.active {
+  width: 55px;
+}
+.hamburger.active span:nth-child(1) {
+  top: 5px;
+  transform: rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+
+}
+.hamburger.active span:nth-child(3) {
+  top: -13px;
+  transform: rotate(-45deg);
+} 
+
+
+
 @media screen and (max-width: 1230px) {
   .header__row {
     margin: auto;
     padding: 20px;
+  }
+  .header__nav {
+    width: 25%;
+  }
+  .nav-items__item a {
+    font-size: 16px;
   }
 } 
 
@@ -73,5 +199,52 @@
   }
   .login-button, .sign-button {
     font-size: 0.8rem;
+  }
+  .header__account-content {
+    margin-right: 5px;
+  }
+  .header__account-content img {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+  }
+  .header__nav {
+    top: 60px;
+  }
+  .nav-items__item a {
+    font-size: 10px;
+  }
+  .header__hamburger {
+    width: 40px;
+  }
+  .hamburger span:nth-child(2) {
+    margin: 6px 0;
+  }
+  .hamburger.active {
+    width: 40px;
+  }
+  .hamburger.active span:nth-child(1) {
+    top: 10px;
+    transform: rotate(45deg);
+  }
+  .hamburger.active span:nth-child(3) {
+    top: -4px;
+    transform: rotate(-45deg);
+  }
+}
+
+
+
+
+@media screen and (max-width: 500px) {
+  .header__nav {
+    width: 100%;
+  }
+  .nav-items {
+    top: 200px;
+  }
+  .nav-items__item a {
+    font-size: 20px;
+    margin-bottom: 35px;
   }
 }
