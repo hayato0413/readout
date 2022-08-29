@@ -1,0 +1,48 @@
+<div class="account-container">
+  <div class="account-box">
+    <div class="account-content">
+      <div class="account-title">
+        <h2>アカウント詳細</h2>
+      </div>
+      <div class="account-detail-container">
+        <div class="account-detail-content">
+          <div class="account-detail-title">
+            <p>プロフィール画像</p>
+          </div>
+          <div class="account-detail-img">
+            <% if @user.avatar.attached? %> 
+              <%= image_tag @user.avatar %>
+            <% end %> 
+          </div>
+        </div>
+        <div class="account-detail-content">
+          <div class="account-detail-title">
+            <p>名前</p>
+          </div>
+          <div class="account-detail-name">
+            <p><%= @user.name %></p>
+          </div>
+        </div>
+        <div class="account-detail-content">
+          <div class="account-detail-title">
+            <p>自己紹介</p>
+          </div>
+          <div class="account-detail-">
+            <p><%= @user.profile %></p>
+          </div>
+        </div>
+        <div class="account-detail-content">
+          <div class="account-detail-title">
+            <p>メールアドレス</p>
+          </div>
+          <div class="account-detail-email">
+            <p><%= @user.email %></p>
+          </div>
+        </div>
+        <div class="account-submit-btn">
+          <%= link_to "編集", edit_user_registration_path %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
