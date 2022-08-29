@@ -7,10 +7,14 @@
         </div>
         <div class="post__user-row">
           <div class="post__user-img">
-            <%= image_tag 'logo.png'%>
+             <% if post.user.avatar.attached? && !post.user.avatar.nil? %>
+              <%= image_tag post.user.avatar %>
+            <% end%>
           </div>
           <div class="post__user-name">
-            <p>ユーザー</p>
+            <% if !post.user.name.nil? %>
+              <%= post.user.name %>
+            <% end%>
           </div>
         </div>
       </div>
