@@ -8,7 +8,9 @@
     <% if user_signed_in? %>
       <div class="header__account-section row-size flex">
         <div class="header__account-content flex">
-          <%= image_tag "logo.png"%>
+          <% if current_user.avatar.attached? %>
+            <%= image_tag current_user.avatar %>
+          <% end %>
           <p><%= current_user.name %></p>
         </div>
 
