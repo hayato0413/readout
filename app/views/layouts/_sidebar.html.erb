@@ -15,11 +15,11 @@
         <li class="middle-response">お気に入り</li>
       </i>
     </a>
-    <a>
+    <%= link_to "/post/user/#{current_user.id}" do %>
       <i class="fa fa-edit sidebar__icon fa-2x hover-border" aria-hidden="true">
         <li class="middle-response">投稿一覧</li>
       </i>
-    </a>
+    <% end %>
     <div class="readout-button">
       <a id="readoutBtn">
         <li>

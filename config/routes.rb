@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :post,          expect: [:index] 
   
   get "/",                  to: 'post#index'
+  get "/post/user/:id",      to: 'post#post_user'
 end

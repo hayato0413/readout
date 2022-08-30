@@ -12,6 +12,10 @@ class PostController < ApplicationController
     end
   end
 
+  def post_user 
+    @posts = Post.where(user_id: current_user.id).order(created_at: :desc)
+  end
+
 
   private
     def post_params
