@@ -1,0 +1,130 @@
+.post_show-title {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.post_show-title .content__title  {
+  margin-bottom: 30px;
+}
+.post_show-title .content__title h1 {
+  font-size: 1.5rem;
+}
+.post_show-evaluation {
+  font-size: 1.2rem;
+}
+.post_show-evaluation .post__evaluation-section {
+  margin-bottom: 0;
+}
+.post_show-evaluation .post__evaluation-section p {
+  padding: none;
+}
+
+
+.post_show-content {
+  margin: 20px 0 50px 0;
+}
+
+.post_show-user {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+
+.post_show-author {
+  display: flex;
+  margin-right: 100px;
+}
+.post_show-publish {
+  display: flex;
+}
+.post_show-content-title {
+  font-weight: bold;
+  margin-right: 20px;
+  width: 120px;
+}
+
+
+
+.post_show-category {
+  display: flex;
+}
+.post_show-category .post_show-content-title {
+  white-space: nowrap;
+  padding-right: 20px;
+}
+.post_show-category-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+.post_show-category-box p {
+  text-align: center;
+  color: #00cc99;
+  margin-right: 10px;
+  white-space: nowrap;
+}
+
+.post_show-border {
+  border-top: 1px solid #dcdcdc;
+  border-bottom: 1px solid #dcdcdc;
+  padding: 10px 5px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.favorite-box {
+  margin-top: 20px;
+  /* font-size: 1.1em; */
+  font-weight: bold;
+  padding-left: 5px;
+}
+
+
+.post_show-menu-box {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+.post_show-edit-box {
+  margin-right: 50px;
+}
+.post_show-edit-btn {
+  background-color: #00cc99;
+  padding: 10px 15px;
+  color: white;
+  font-weight: bold;
+  border-radius: 1.1rem;
+}
+.post_show-destroy-btn {
+  background-color:crimson;
+  color: white;
+  padding: 10px 15px;
+  font-weight: bold;
+  border-radius: 1.1rem;
+}
+
+@media screen and (max-width: 750px) {
+  .post_show-category {
+    flex-direction: column;
+  }
+  .post_show-category .post_show-content-title {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .post_show-category-box p {
+    text-align: left;
+    border-right: none;
+  }
+  .post_show-category-box p:nth-child(1) {
+    border-left: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  .post_show-title .content__title h1 {
+    font-size: 1.2rem;
+  }
+  .post_show-edit-box {
+    margin-right: 10px;
+  } 
+}

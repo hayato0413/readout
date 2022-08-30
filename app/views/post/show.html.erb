@@ -1,0 +1,67 @@
+<div class="content">
+  <div class="content-container">
+    <div class="post_show-title">
+      <div class="content__title">
+        <h1><%= @post.title%></h1>
+      </div>
+      <div class="post_show-evaluation">
+        <div class="post__evaluation-section">
+          <% star = "☆☆☆☆☆"%>
+          <% @post.evaluation.times do |i| %>
+            <% star[i] = "★"%>
+          <% end %>
+          <p>評価 <span><%= "#{star}" %></span></p>
+        </div>
+      </div>
+    </div>
+    <div class="post_show-user">
+       <div class="post__user-row">
+          <div class="post__user-img">
+          <% if @post.user.avatar.attached? %>
+            <%= image_tag @post.user.avatar %>
+          <% end%>
+        </div>
+        <div class="post__user-name">
+          <% if !@post.user.name.nil? %>
+            <%= @post.user.name %>
+          <% end%>
+        </div>
+      </div>
+    </div>
+    <div class="post_show-content">
+      <p><%= @post.content %></p>
+    </div>
+    <div class="post_show-author post_show-border">
+      <div class="post_show-content-title">
+        <p>著者</p>
+      </div>
+      <p><%= @post.author %></p>
+    </div>
+    <div class="post_show-publish post_show-border">
+      <div class="post_show-content-title">
+        <p>出版社</p>
+      </div>
+      <p><%= @post.publish %></p>
+    </div>
+    <div class="post_show-category post_show-border">
+      <div class="post_show-content-title">
+        <p>カテゴリー</P>
+      </div>
+      <div class="post_show-category-box">
+        <% @post.categories.each do |category| %>
+          <p>#<%= category.name %></p>
+        <% end %>
+      </div>
+    </div>
+    <% if user_signed_in? && current_user.id == @post.user_id %>
+      <div class="post_show-menu-box">
+        <div class="post_show-edit-box">
+          <%= link_to "編集", edit_post_path, {class: "post_show-edit-btn"} %>
+        </div>
+        <div class="post_show-destroy-box">
+          <%= link_to "削除", "/post/#{@post.id}", method: :delete, data: {confirm: "この投稿を削除しますか？"}, class: "post_show-destroy-btn" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

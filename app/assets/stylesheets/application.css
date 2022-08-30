@@ -55,7 +55,8 @@ body {
 .content__title h1 {
   border-bottom: 4px solid #00cc99;
   display: inline;
-  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 5px;
 }
 .white-space-nowrap {
   white-space: nowrap;
