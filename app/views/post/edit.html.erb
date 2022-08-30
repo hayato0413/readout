@@ -1,0 +1,48 @@
+<div class="content">
+  <div class="content-container">
+      <div class="content__title">
+        <h1>投稿編集</h1>
+      </div>
+    <div class="readout-content">
+      <%= form_with model: @post, local: true  do |f| %>
+        <div class="readout__text-field row-margin">
+           <%= f.text_field :title, autofocus: true, autocomplete: "book_title", placeholder: "※ 本のタイトル 最大40文字" %>
+        </div>
+        <div class="readout__text-field row-margin">
+          <%= f.text_field :author, autofocus: true, autocomplete: "author", placeholder: "著者 最大20文字" %>
+        </div>
+        <div class="readout__text-field row-margin">
+          <%= f.text_field :publish, autofocus: true, autocomplete: "publish", placeholder: "出版社 最大20文字" %>
+        </div>
+        <div class="readout__evaluation-section row-margin">
+          <%= f.radio_button :evaluation, :"5"%>
+          <%= f.label :evaluation_5, "★"%>
+          <%= f.radio_button :evaluation, :"4"%>
+          <%= f.label :evaluation_4, "★"%>
+          <%= f.radio_button :evaluation, :"3"%>
+          <%= f.label :evaluation_3, "★"%>
+          <%= f.radio_button :evaluation, :"2"%>
+          <%= f.label :evaluation_2, "★"%>
+          <%= f.radio_button :evaluation, :"1"%>
+          <%= f.label :evaluation_1, "★"%>
+          <p class="readout__evaluation-value">評価</p>
+        </div>
+        <div class="readout__category-section row-margin">
+          <div class="readout__category-title">
+            <p>
+              カテゴリー
+            </p>
+          </div>
+          <div class="readout__category-checkbox">
+            <%= f.collection_check_boxes :category_ids, @categories, :id, :name%> 
+          </div>
+        </div>
+        <div class="readout__book-review">
+          <%= f.text_area :content, autofocus: true, autocomplete: "review", placeholder: "※ レビュー 最大150文字" %>
+        </div>
+        <div class="readout__submit-btn">
+          <%= f.submit value: "編集する" %>
+        </div>
+      <% end %>
+    </div>
+</div>
