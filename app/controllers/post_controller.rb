@@ -29,6 +29,15 @@ class PostController < ApplicationController
     end
   end
 
+  def destroy
+    @post = Post.find_by(id: params[:id])
+    if @post.destroy
+      redirect_to post_index_path
+    else 
+      render :show
+    end
+  end
+
   def post_user 
     @posts = Post.where(user_id: current_user.id).order(created_at: :desc)
   end
