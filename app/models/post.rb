@@ -4,6 +4,10 @@ class Post < ApplicationRecord
     favorites.where(user_id: user.id).exists?
   end
 
+  def self.search(keyword)
+    where(["title like? OR content like?", "%#{keyword}%", "%#{keyword}%"])
+  end
+
   has_many :post_category_relations
   has_many :categories, through: :post_category_relations
 

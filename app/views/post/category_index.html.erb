@@ -4,11 +4,11 @@
   </div>
   <div class="content__box-section">
     <div class="category_index__search-section">
-      <form>
-        <input type="text" id="category_index__search-area">
-        <input tyep="submit" value="検索" id="category_index__submit-area">
+      <%= form_with url: search_path, method: :get, local: true do |f| %>
+        <%= f.text_field :keyword, value: @keyword, id: "category_index__search-area"%>
+        <%= f.submit "検索", id: "category_index__submit-area"%>
         <i class="fa fa-search" aria-hidden="true"></i>
-      </form>
+      <% end %>
     </div>
 
     <div class="category_index__container">

@@ -51,6 +51,11 @@ class PostController < ApplicationController
     @posts = Post.where(id: favorites).order(created_at: :desc)
   end
 
+  def search
+    @posts = Post.search(params[:keyword]).order(created_at: :desc)
+    @keyword = params[:keyword]
+  end
+
   def post_user 
     @posts = Post.where(user_id: current_user.id).order(created_at: :desc)
   end

@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   get "/category_index",                to: 'post#category_index'
   get "/post/category/:id",             to: 'post#category'
   get "/post/:id/favorites_list",       to: 'post#favorite'
+  get 'search',                         to: 'post#search'
 end
