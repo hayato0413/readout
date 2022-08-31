@@ -53,6 +53,21 @@
         <% end %>
       </div>
     </div>
+
+    <% if user_signed_in? %>
+      <div class="favorite-box">
+        <% if @post.favorite?(current_user) %>
+          <%= link_to post_favorites_path(@post.id), method: :delete do %>
+            <p>お気に入り <span style="color:crimson;">❤</span> <%= @post.favorites.count%></p>
+          <% end %>
+        <% else %>
+          <%= link_to post_favorites_path(@post.id), method: :post do %>
+            <p>お気に入り <span>❤︎</span> <%= @post.favorites.count%></p>
+          <% end %>
+        <% end %>
+      </div>
+    <% end %>
+  
     <% if user_signed_in? && current_user.id == @post.user_id %>
       <div class="post_show-menu-box">
         <div class="post_show-edit-box">
