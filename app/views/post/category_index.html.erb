@@ -1,0 +1,28 @@
+<div class="content">
+  <div class="content__title">
+    <h1>カテゴリー</h1>
+  </div>
+  <div class="content__box-section">
+    <div class="category_index__search-section">
+      <form>
+        <input type="text" id="category_index__search-area">
+        <input tyep="submit" value="検索" id="category_index__submit-area">
+        <i class="fa fa-search" aria-hidden="true"></i>
+      </form>
+    </div>
+
+    <div class="category_index__container">
+      <% @categories.each do |category| %>
+        <% if category.id % 2 == 0 %>
+          <%= link_to "/post/category/#{category.id}", {class: "category_index__item"} do %>
+            <p><%= category.name %></p>
+          <% end %>
+        <% else %>
+          <%= link_to "/post/category/#{category.id}", {class: "category_index__item odd-item"} do %>    
+            <p><%= category.name %></p>
+          <% end %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
