@@ -40,6 +40,11 @@ class PostController < ApplicationController
 
   def category_index
   end
+  
+  def category
+    @posts = Post.left_joins(:post_category_relations).where(:post_category_relations => {category_id: params[:id]}).order(created_at: :desc)
+    @category = Category.find_by(id: params[:id])
+  end
 
   def post_user 
     @posts = Post.where(user_id: current_user.id).order(created_at: :desc)

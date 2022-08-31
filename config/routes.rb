@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   
   get "/",                    to: 'post#index'
   get "/post/user/:id",       to: 'post#post_user'
-  get "/category_index", to: 'post#category_index'
+  get "/category_index",      to: 'post#category_index'
+  get "/post/category/:id",   to: 'post#category'
 end
