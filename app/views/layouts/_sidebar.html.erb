@@ -10,11 +10,11 @@
         <li class="middle-response">本を探す</li>
       </i>
     <% end %>
-    <a>
+    <%= link_to "/post/#{current_user.id}/favorites_list" do %>
       <i class="fa fa-heart sidebar__icon fa-2x hover-border" aria-hidden="true">
         <li class="middle-response">お気に入り</li>
       </i>
-    </a>
+    <% end %>
     <%= link_to "/post/user/#{current_user.id}" do %>
       <i class="fa fa-edit sidebar__icon fa-2x hover-border" aria-hidden="true">
         <li class="middle-response">投稿一覧</li>

@@ -46,6 +46,11 @@ class PostController < ApplicationController
     @category = Category.find_by(id: params[:id])
   end
 
+  def favorite 
+    favorites = Favorite.where(user_id: current_user.id).pluck(:post_id)
+    @posts = Post.where(id: favorites).order(created_at: :desc)
+  end
+
   def post_user 
     @posts = Post.where(user_id: current_user.id).order(created_at: :desc)
   end
