@@ -9,9 +9,9 @@ class PostController < ApplicationController
   def create
     @post = Post.new(post_params)
     if @post.save
-      redirect_to post_index_path
+      redirect_to post_index_path, notice: "投稿しました"
     else 
-      redirect_to post_index_path
+      redirect_to post_index_path, alert: "投稿に失敗しました"
     end
   end
 
@@ -26,18 +26,18 @@ class PostController < ApplicationController
   def update 
     @post = Post.find(params[:id])
     if @post.update(post_params)
-      redirect_to post_path(id: @post.id)
+      redirect_to post_path(id: @post.id), notice: "投稿を更新しました"
     else 
-      render :edit
+      render :edit, alert: "投稿の更新に失敗しました"
     end
   end
 
   def destroy
     @post = Post.find_by(id: params[:id])
     if @post.destroy
-      redirect_to post_index_path
+      redirect_to post_index_path, notice: "投稿を破棄しました"
     else 
-      render :show
+      render :show, alert: "投稿の破棄に失敗しました"
     end
   end
 

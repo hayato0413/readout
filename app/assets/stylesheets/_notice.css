@@ -1,0 +1,13 @@
+.notice__container {
+  text-align: center;
+  color: white;
+  width: 100%;
+}
+.notice__content {
+  background-color: #00cc99;
+  padding: 10px 0;
+}
+.alert__content {
+  background-color: crimson;
+  padding: 10px 0;
+}
