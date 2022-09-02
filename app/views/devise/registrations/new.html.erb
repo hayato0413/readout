@@ -28,7 +28,12 @@
         <div class="actions account-submit-btn">
           <%= f.submit "新規登録" %>
         </div>
-      <% end %>            
+      <% end %>
+      <%= form_tag( '/guest_sign_in' , method: :post) do %>
+        <div class="guest_sign_in-area">
+          <%= submit_tag "ゲストログイン", class: "guest_sing_in" %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
