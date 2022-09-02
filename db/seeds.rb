@@ -5,6 +5,29 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+users = [
+  "ユーザー1", 
+  "ユーザー2",
+  "ユーザー3", 
+  "ユーザー4", 
+  "ユーザー5",
+  "ユーザー6",
+  "ユーザー7",
+  "ユーザー8",
+  "ユーザー9",
+  "ユーザー10"
+]
+
+users.each_with_index do |user, i|
+  User.create(
+    id: i + 1,
+    name: "#{user}",
+    email: "#{i + 1}@gamil.com",
+    password: SecureRandom.urlsafe_base64
+  )
+end
+
 Post.create(
   id:             1,
   title:          '19600日やれば、ムキムキになる! 必読! 筋トレマニアのための必殺本', 
@@ -210,7 +233,6 @@ Post.create(
   user_id:        9
 )
 
-
 Category.create(
   id:             1,
   name:           '小説'
@@ -274,4 +296,280 @@ Category.create(
 Category.create(
   id:             16,
   name:           'アート'
+)
+
+PostCategoryRelation.create(
+  id: 1,
+  post_id: 1,
+  category_id: 1
+)
+PostCategoryRelation.create(
+  id: 2,
+  post_id: 1,
+  category_id: 3
+)
+PostCategoryRelation.create(
+  id: 3,
+  post_id: 1,
+  category_id: 5
+)
+PostCategoryRelation.create(
+  id: 4,
+  post_id: 1,
+  category_id: 14
+)
+PostCategoryRelation.create(
+  id: 5,
+  post_id: 2,
+  category_id: 12
+)
+PostCategoryRelation.create(
+  id: 6,
+  post_id: 2,
+  category_id: 15
+)
+PostCategoryRelation.create(
+  id: 7,
+  post_id: 3,
+  category_id: 16
+)
+PostCategoryRelation.create(
+  id: 8,
+  post_id: 4,
+  category_id: 4
+)
+PostCategoryRelation.create(
+  id: 9,
+  post_id: 4,
+  category_id: 6
+)
+PostCategoryRelation.create(
+  id: 10,
+  post_id: 4,
+  category_id: 7
+)
+PostCategoryRelation.create(
+  id: 11,
+  post_id: 4,
+  category_id: 13
+)
+PostCategoryRelation.create(
+  id: 12,
+  post_id: 4,
+  category_id: 16
+)
+PostCategoryRelation.create(
+  id: 13,
+  post_id: 5,
+  category_id: 3
+)
+PostCategoryRelation.create(
+  id: 14,
+  post_id: 5,
+  category_id: 6
+)
+PostCategoryRelation.create(
+  id: 15,
+  post_id: 6,
+  category_id: 5
+)
+PostCategoryRelation.create(
+  id: 16,
+  post_id: 6,
+  category_id: 7
+)
+PostCategoryRelation.create(
+  id: 17,
+  post_id: 6,
+  category_id: 9
+)
+PostCategoryRelation.create(
+  id: 18,
+  post_id: 7,
+  category_id: 1
+)
+PostCategoryRelation.create(
+  id: 19,
+  post_id: 8,
+  category_id: 2
+)
+PostCategoryRelation.create(
+  id: 20,
+  post_id: 8,
+  category_id: 3
+)
+PostCategoryRelation.create(
+  id: 21,
+  post_id: 9,
+  category_id: 8
+)
+PostCategoryRelation.create(
+  id: 22,
+  post_id: 9,
+  category_id: 10
+)
+PostCategoryRelation.create(
+  id: 23,
+  post_id: 10,
+  category_id: 4
+)
+PostCategoryRelation.create(
+  id: 24,
+  post_id: 10,
+  category_id: 9
+)
+PostCategoryRelation.create(
+  id: 25,
+  post_id: 10,
+  category_id: 13
+)
+PostCategoryRelation.create(
+  id: 26,
+  post_id: 10,
+  category_id: 14
+)
+PostCategoryRelation.create(
+  id: 27,
+  post_id: 11,
+  category_id: 3
+)
+PostCategoryRelation.create(
+  id: 28,
+  post_id: 11,
+  category_id: 4
+)
+PostCategoryRelation.create(
+  id: 29,
+  post_id: 12,
+  category_id: 2
+)
+PostCategoryRelation.create(
+  id: 30,
+  post_id: 13,
+  category_id: 1
+)
+PostCategoryRelation.create(
+  id: 31,
+  post_id: 13,
+  category_id: 3
+)
+PostCategoryRelation.create(
+  id: 32,
+  post_id: 14,
+  category_id: 12
+)
+PostCategoryRelation.create(
+  id: 33,
+  post_id: 15,
+  category_id: 11
+)
+PostCategoryRelation.create(
+  id: 34,
+  post_id: 16,
+  category_id: 1
+)
+PostCategoryRelation.create(
+  id: 35,
+  post_id: 16,
+  category_id: 3
+)
+PostCategoryRelation.create(
+  id: 36,
+  post_id: 17,
+  category_id: 4
+)
+PostCategoryRelation.create(
+  id: 37,
+  post_id: 17,
+  category_id: 7
+)
+PostCategoryRelation.create(
+  id: 38,
+  post_id: 17,
+  category_id: 15
+)
+PostCategoryRelation.create(
+  id: 39,
+  post_id: 18,
+  category_id: 14
+)
+PostCategoryRelation.create(
+  id: 40,
+  post_id: 18,
+  category_id: 16
+)
+PostCategoryRelation.create(
+  id: 41,
+  post_id: 19,
+  category_id: 1
+)
+PostCategoryRelation.create(
+  id: 42,
+  post_id: 19,
+  category_id: 2
+)
+PostCategoryRelation.create(
+  id: 43,
+  post_id: 19,
+  category_id: 3
+)
+PostCategoryRelation.create(
+  id: 44,
+  post_id: 20,
+  category_id:5
+)
+PostCategoryRelation.create(
+  id: 45,
+  post_id: 20,
+  category_id: 6
+)
+PostCategoryRelation.create(
+  id: 46,
+  post_id: 21,
+  category_id: 8
+)
+PostCategoryRelation.create(
+  id: 47,
+  post_id: 21,
+  category_id: 11
+)
+PostCategoryRelation.create(
+  id: 48,
+  post_id: 21,
+  category_id: 13
+)
+PostCategoryRelation.create(
+  id: 49,
+  post_id: 21,
+  category_id: 14
+)
+PostCategoryRelation.create(
+  id: 50,
+  post_id: 21,
+  category_id: 16
+)
+PostCategoryRelation.create(
+  id: 51,
+  post_id: 22,
+  category_id: 3
+)
+PostCategoryRelation.create(
+  id: 52,
+  post_id: 22,
+  category_id: 5
+)
+PostCategoryRelation.create(
+  id: 53,
+  post_id: 23,
+  category_id: 6
+)
+PostCategoryRelation.create(
+  id: 54,
+  post_id: 23,
+  category_id: 9
+)
+PostCategoryRelation.create(
+  id: 55,
+  post_id: 23,
+  category_id: 10
 )

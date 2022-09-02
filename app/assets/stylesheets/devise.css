@@ -63,6 +63,7 @@
   height: 60px;
   border-radius: 2.5rem;
   object-fit: cover;
+  border: 1px solid #dcdcdc;
 }
 .account-edit-img {
   border: 1px solid #000;

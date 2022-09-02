@@ -8,7 +8,7 @@ class Post < ApplicationRecord
     where(["title like? OR content like?", "%#{keyword}%", "%#{keyword}%"])
   end
 
-  has_many :post_category_relations
+  has_many :post_category_relations, dependent: :destroy
   has_many :categories, through: :post_category_relations
 
   has_many :favorites, dependent: :destroy

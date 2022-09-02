@@ -7,8 +7,10 @@
         </div>
         <div class="post__user-row">
           <div class="post__user-img">
-             <% if post.user.avatar.attached? && !post.user.avatar.nil? %>
+            <% if post.user.avatar.attached? && !post.user.avatar.nil? %>
               <%= image_tag post.user.avatar %>
+            <% else %>
+              <%= image_tag "default_user.jpeg"%>
             <% end%>
           </div>
           <div class="post__user-name">
