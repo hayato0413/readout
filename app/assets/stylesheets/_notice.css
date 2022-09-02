@@ -1,7 +1,11 @@
 .notice__container {
+  position: absolute;
+  top: 0;
   text-align: center;
   color: white;
   width: 100%;
+  animation: notice_animation 1s forwards;
+  animation-delay: 3s;
 }
 .notice__content {
   background-color: #00cc99;
@@ -10,4 +14,14 @@
 .alert__content {
   background-color: crimson;
   padding: 10px 0;
+}
+
+@keyframes notice_animation {
+  from {
+    transform: translateY(0px);
+    }
+  
+  to {
+    transform: translateY(-100px);
+  }
 }
