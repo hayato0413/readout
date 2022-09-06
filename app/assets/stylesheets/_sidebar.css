@@ -103,7 +103,7 @@
 @media screen and (max-width: 750px) {
   .sidebar__nav{
     margin-top: 0;
-    padding-top: 10px;
+    padding-top: 6px;
   }
   .sidebar__menu-list {
     display: flex;

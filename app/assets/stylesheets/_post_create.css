@@ -59,7 +59,7 @@
   margin-bottom: 20px;
 }
 .readout__attention {
-  text-align: right;
+  text-align: left;
   opacity: 0.5;
 }
 .readout__submit-btn {
