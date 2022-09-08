@@ -7,6 +7,12 @@ RSpec.describe User, type: :model do
       @user = FactoryBot.build(:user)
     end
 
+    describe 'Userモデルの初期インスタンス' do
+      it 'バリデーションエラーがないこと' do 
+        expect(@user).to be_valid
+      end
+    end
+
     describe 'ネームカラム' do
       it '31文字以上でバリデーションエラーが出ること' do
         @user.name = ('a' * 31)
