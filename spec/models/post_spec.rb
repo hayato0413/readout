@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Post, type: :model do
-  describe 'バリデーション' do 
+  describe 'Postモデルのバリデーション' do 
 
     before do 
       @post = FactoryBot.build(:post)
