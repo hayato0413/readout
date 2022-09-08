@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  describe 'ユーザーモデルのバリデーション' do
+  describe 'Userモデルのバリデーション' do
 
     before do 
       @user = FactoryBot.build(:user)
@@ -13,7 +13,7 @@ RSpec.describe User, type: :model do
       end
     end
 
-    describe 'ネームカラム' do
+    describe 'nameカラム' do
       it '31文字以上でバリデーションエラーが出ること' do
         @user.name = ('a' * 31)
         @user.valid?
@@ -21,12 +21,13 @@ RSpec.describe User, type: :model do
       end
     end
     
-    describe 'プロファイルカラム' do 
+    describe 'profileカラム' do 
       it '121文字以上でバリデーションエラーが出ること' do 
         @user.profile = ('a' * 121)
         @user.valid?
         expect(@user.errors.full_messages).to include '自己紹介は120文字以内で入力してください'
       end
     end
+    
   end
 end

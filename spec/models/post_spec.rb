@@ -7,13 +7,13 @@ RSpec.describe Post, type: :model do
       @post = FactoryBot.build(:post)
     end
     
-    describe '初期インスタンス' do
+    describe 'Postモデルの初期インスタンス' do
       it 'バリデーションエラーがないこと' do 
         expect(@post).to be_valid
       end
     end
 
-    describe 'タイトルカラム' do
+    describe 'titleカラム' do
       context '空の場合' do 
         it 'バリデーションエラーが出ること' do
           @post.title = ''
@@ -30,7 +30,7 @@ RSpec.describe Post, type: :model do
       end
     end
 
-    describe 'コンテンツカラム' do
+    describe 'contentカラム' do
       context '空の場合' do 
         it 'バリデーションエラーが出ること' do
           @post.content = ''
@@ -47,7 +47,7 @@ RSpec.describe Post, type: :model do
       end
     end
 
-    describe 'アクターカラム' do
+    describe 'authorカラム' do
       it '21文字以上でバリデーションエラーが出ること' do
         @post.author = ('a' * 21)
         @post.valid?
@@ -55,7 +55,7 @@ RSpec.describe Post, type: :model do
       end
     end
 
-    describe 'パブリッシュカラム' do 
+    describe 'publishカラム' do 
       it '21文字以上でバリデーションエラーが出ること' do 
         @post.publish = ('a' * 21)
         @post.valid?
@@ -63,7 +63,7 @@ RSpec.describe Post, type: :model do
       end
     end
 
-    describe 'エバリュエーションカラム' do 
+    describe 'evaluationカラム' do 
       context '空の場合' do 
         it 'バリデーションエラーが出ること'do 
           @post.evaluation = ''
@@ -89,4 +89,3 @@ RSpec.describe Post, type: :model do
 
   end
 end
-
