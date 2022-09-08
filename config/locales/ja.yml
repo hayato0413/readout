@@ -28,11 +28,9 @@ ja:
       post:
         title: タイトル
         content: レビュー
-        author: メールアドレス
-        publish: パスワード
-        category_id_1: カテゴリー1
-        category_id_2: カテゴリー2
-        category_id_3: カテゴリー3
+        author: 著者
+        publish: 出版社
+        evaluation: 評価
     models:
       user: ユーザー
   devise:

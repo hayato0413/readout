@@ -19,5 +19,6 @@ class Post < ApplicationRecord
   validates :content, presence: true, length: { maximum: 150 }
   validates :author, length: { maximum: 20 }
   validates :publish, length: { maximum: 20 }
+  validates :evaluation, presence: true, numericality: { greater_than: 0,less_than: 6 }
 
 end
