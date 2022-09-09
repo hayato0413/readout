@@ -28,6 +28,13 @@ RSpec.describe User, type: :model do
         expect(@user.errors.full_messages).to include '自己紹介は120文字以内で入力してください'
       end
     end
-    
+
+    describe 'ゲストログインメソッド' do
+      it 'ゲストアカウントの作成ができること' do
+        user = User.guest
+        expect(user.email).to eq 'guest@example.com'
+        expect(user.name).to eq 'ゲストユーザー'
+      end
+    end
   end
 end
