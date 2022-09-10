@@ -4,7 +4,7 @@ RSpec.describe Post, type: :model do
   describe 'Postモデルのバリデーション' do 
 
     before do 
-      @post = FactoryBot.build(:post)
+      @post = FactoryBot.create(:post)
     end
     
     describe 'Postモデルの初期インスタンス' do
@@ -86,6 +86,65 @@ RSpec.describe Post, type: :model do
         end
       end
     end 
+
+    describe 'favorite?メソッド' do 
+      before do 
+        @favorite = FactoryBot.create(:favorite)
+      end
+      context 'Favoriteモデルに一致するuser_idがある場合' do 
+        it 'trueを返すこと' do 
+          @post2 = Post.find_by(id: @favorite.post_id)
+          @user2 = User.find_by(id: @favorite.user_id)
+          expect(@post2.favorite?(@user2)).to eq true
+        end
+      end
+      context 'Favoriteモデルに一致するuser_idがない場合' do
+        it 'falseを返すこと' do 
+          @user = FactoryBot.build(:user)
+          expect(@post.favorite?(@user)).to eq false
+        end 
+      end
+    end
+
+    describe 'searchメソッド' do 
+      before do 
+        @keyword = 'テスト'
+      end
+      describe 'titleカラム' do 
+        before do 
+          @post2 = FactoryBot.create(:post, title: 'test')
+        end 
+        context 'keywordと一致するワードがある場合' do
+          it 'Postモデルからそのデータが取得できていること' do
+            @posts = Post.search(@keyword)
+            expect(@posts[0].title).to eq 'テスト'
+          end
+        end
+        context '引数と一致するワードがない場合' do 
+          it 'Postモデルからそのデータが取得できていないこと' do
+            @posts = Post.search('a')
+            expect(@posts).to eq []
+          end
+        end
+      end
+      describe 'contentカラム' do 
+        before do 
+          @post2 = FactoryBot.create(:post, content: 'test')
+        end 
+        context 'keywordと一致するワードがある場合' do
+          it 'Postモデルからそのデータが取得できていること' do
+            @posts = Post.search(@keyword)
+            expect(@posts[0].content).to eq 'テスト'
+          end
+        end
+        context '引数と一致するワードがない場合' do 
+          it 'Postモデルからそのデータが取得できていないこと' do
+            @posts = Post.search('a')
+            expect(@posts).to eq []
+          end
+        end
+      end
+    end
 
   end
 end
