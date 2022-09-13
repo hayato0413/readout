@@ -9,7 +9,7 @@ class PostController < ApplicationController
   def create
     @post = Post.new(post_params)
     if @post.save
-      redirect_to post_index_path, notice: "投稿しました"
+      redirect_to root_path, notice: "投稿しました"
     else 
       redirect_to post_index_path, alert: "投稿に失敗しました"
     end
