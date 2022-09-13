@@ -20,8 +20,11 @@ class Users::SessionsController < Devise::SessionsController
 
   def guest_sign_in
     user = User.guest
-    sign_in user
-    redirect_to post_index_path, notice: 'ゲストユーザーとしてログインしました。'
+    if sign_in user
+      redirect_to post_index_path, notice: 'ゲストユーザーとしてログインしました。'
+    else 
+      redirect_to post_index_path, alert: 'ゲストユーザーとしてログインできませんでした'
+    end
   end
 
   # protected
