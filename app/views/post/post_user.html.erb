@@ -1,4 +1,5 @@
 <div class="content__title">
   <h1>投稿一覧</h1>
+  <% content_for(:html_title) { '投稿一覧 - Read Out' } %>
 </div>
 <%= render partial: "post", collection: @posts %>

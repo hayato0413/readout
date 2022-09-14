@@ -3,6 +3,7 @@
     <div class="post_show-title">
       <div class="content__title">
         <h1><%= @post.title%></h1>
+        <% content_for(:html_title) { "#{@post.title} - Read Out" } %>
       </div>
       <div class="post_show-evaluation">
         <div class="post__evaluation-section">

@@ -5,6 +5,7 @@
         <%= render "devise/shared/error_messages", resource: resource %>
         <div class="account-title">
           <h2>新規登録</h2>
+          <% content_for(:html_title) { "新規登録 - Read Out" } %>
         </div>
          <div class="field account-name account-input-box">
           <%= f.label "名前" %>

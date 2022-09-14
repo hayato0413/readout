@@ -2,6 +2,7 @@
   <div class="content-container">
       <div class="content__title">
         <h1>投稿編集</h1>
+        <% content_for(:html_title) { '投稿編集 - Read Out' } %>
       </div>
     <div class="readout-content">
       <%= form_with model: @post, local: true  do |f| %>

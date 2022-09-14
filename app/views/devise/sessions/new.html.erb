@@ -4,6 +4,7 @@
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <div class="account-title">
           <h2>ログイン</h2>
+          <% content_for(:html_title) { "ログイン - Read Out" } %>
         </div>
 
         <div class="field account-email account-input-box">

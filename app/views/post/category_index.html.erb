@@ -1,10 +1,11 @@
 <div class="content">
   <div class="content__title">
     <h1>カテゴリー</h1>
+    <% content_for(:html_title) { 'カテゴリー - Read Out' } %>
   </div>
   <div class="content__box-section">
     <div class="category_index__search-section">
-      <%= form_with url: search_path, method: :get, local: true do |f| %>
+      <%= form_with url: post_search_path, method: :get, local: true do |f| %>
         <%= f.text_field :keyword, value: @keyword, id: "category_index__search-area"%>
         <%= f.submit "検索", id: "category_index__submit-area"%>
         <i class="fa fa-search" aria-hidden="true"></i>
