@@ -14,7 +14,7 @@ class FavoritesController < ApplicationController
   def destroy
     @post_favorite = Favorite.find_by(user_id: current_user.id, post_id: params[:post_id])
     if @post_favorite.destroy
-      redirect_to post_path(params[:post_id]), notice: "お気に入りを取消ました"
+      redirect_to post_path(params[:post_id]), notice: "お気に入りを取り消しました"
     else 
       redirect_to post_path(params[:post_id]), alert: "お気に入りを取消できませんでした"
     end

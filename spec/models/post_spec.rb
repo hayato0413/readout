@@ -107,17 +107,15 @@ RSpec.describe Post, type: :model do
     end
 
     describe 'searchメソッド' do 
-      before do 
-        @keyword = 'テスト'
-      end
       describe 'titleカラム' do 
         before do 
           @post2 = FactoryBot.create(:post, title: 'test')
+          @keyword = "te"
         end 
         context 'keywordと一致するワードがある場合' do
           it 'Postモデルからそのデータが取得できていること' do
             @posts = Post.search(@keyword)
-            expect(@posts[0].title).to eq 'テスト'
+            expect(@posts[0].title).to eq 'test'
           end
         end
         context '引数と一致するワードがない場合' do 
@@ -130,11 +128,12 @@ RSpec.describe Post, type: :model do
       describe 'contentカラム' do 
         before do 
           @post2 = FactoryBot.create(:post, content: 'test')
+          @keyword = "te"
         end 
         context 'keywordと一致するワードがある場合' do
           it 'Postモデルからそのデータが取得できていること' do
             @posts = Post.search(@keyword)
-            expect(@posts[0].content).to eq 'テスト'
+            expect(@posts[0].content).to eq 'test'
           end
         end
         context '引数と一致するワードがない場合' do 

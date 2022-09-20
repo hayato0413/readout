@@ -276,7 +276,7 @@ DEPENDENCIES
   aws-sdk-s3
   bootsnap (>= 1.4.4)
   byebug
-  capybara (>= 3.26)
+  capybara
   devise
   factory_bot_rails
   faker
@@ -290,7 +290,7 @@ DEPENDENCIES
   rails-i18n (~> 6.0.0)
   rspec-rails (~> 4.0.0)
   sass-rails (>= 6)
-  selenium-webdriver (>= 4.0.0.rc1)
+  selenium-webdriver
   spring
   turbolinks (~> 5)
   tzinfo-data
