@@ -1,0 +1,19 @@
+.footer__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+footer {  
+  width: 100%;
+  text-align: center;
+  background-color: #00cc99;
+  border-top: 2px solid #dcdcdc;
+  color: white;
+}
+footer p {
+  padding: 20px 0; 
+}
+@media screen and (max-width: 750px) {
+  footer {
+    display: none;
+  }
+}
