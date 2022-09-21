@@ -64,4 +64,13 @@ RSpec.describe 'User', type: :system do
       expect(page).to have_content "アカウント情報を変更しました"
     end
   end
+
+  describe "ゲストログイン" do 
+    it 'ゲストユーザーとしてログインできること' do 
+      visit root_path 
+      click_link "新規登録" 
+      click_button "ゲストログイン"
+      expect(page).to have_content "ゲストユーザーとしてログインしました"
+    end
+  end
 end
