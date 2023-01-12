@@ -18,8 +18,8 @@
       <% end %>
     <% else %>
       <%= link_to "/post/user/2147483647" do %>
-        <i class="fa fa-heart sidebar__icon fa-2x hover-border" aria-hidden="true">
-          <li class="middle-response login-limit">お気に入り</li>
+        <i class="fa fa-heart sidebar__icon login-limit fa-2x hover-border" aria-hidden="true">
+          <li class="middle-response">お気に入り</li>
         </i>
       <% end %>
     <% end %>
@@ -31,8 +31,8 @@
       <% end %>
     <% else %>
       <%= link_to "/post/user/2147483647" do %>
-        <i class="fa fa-edit sidebar__icon fa-2x hover-border" aria-hidden="true">
-          <li class="middle-response login-limit">投稿一覧</li>
+        <i class="fa fa-edit sidebar__icon login-limit fa-2x hover-border" aria-hidden="true">
+          <li class="middle-response">投稿一覧</li>
         </i>
       <% end %>
     <% end %>
@@ -42,7 +42,7 @@
           <% if user_signed_in? %>
             <i class="fa fa-book" aria-hidden="true"><span class="middle-response">リードアウト</span></i>
           <% else %>
-            <i class="fa fa-book" aria-hidden="true"><span class="middle-response login-limit">リードアウト</span></i>
+            <i class="fa fa-book login-limit" aria-hidden="true"><span class="middle-response">リードアウト</span></i>
           <% end %>
         </li>
       </a>
