@@ -1,5 +1,10 @@
 <nav class="sidebar__nav">
   <ul class="sidebar__menu-list">
+    <%= link_to post_lanking_path do %>
+      <i class="fas fa-2x sidebar__icon hover-border fa-crown" aria-hidden="true">
+        <li class="middle-response">ランキング</li>
+      </i>
+    <% end %>
     <%= link_to root_path do %>
       <i class="fa fa-home sidebar__icon fa-2x hover-border" aria-hidden="true">
         <li class="middle-response">ホーム</li>
@@ -23,7 +28,9 @@
         </i>
       <% end %>
     <% end %>
-    <% if user_signed_in? %>
+    <%
+=begin%>
+ <% if user_signed_in? %>
       <%= link_to "/post/user/#{current_user.id}" do %>
         <i class="fa fa-edit sidebar__icon fa-2x hover-border" aria-hidden="true">
           <li class="middle-response">投稿一覧</li>
@@ -35,7 +42,9 @@
           <li class="middle-response">投稿一覧</li>
         </i>
       <% end %>
-    <% end %>
+    <% end %> 
+<%
+=end%>
     <div class="readout-button">
       <a id="readoutBtn">
         <li>

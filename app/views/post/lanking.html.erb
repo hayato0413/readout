@@ -1,0 +1,19 @@
+<div class="content__title">
+  <h1>ランキング</h1>
+  <% content_for(:html_title) { 'ランキング - Read Out' } %>
+</div>
+<% @posts.each_with_index do |post, i| %>
+  <% index = post.favorites.count %>
+  <div class="lanking_box">
+    <% case i when 0 %>
+      <p><i class="fas fa-crown" style="color:gold"></i> <%= i + 1 %>位</p>
+    <% when 1 %>
+      <p><i class="fas fa-crown" style="color:silver"></i> <%= i + 1 %>位</p>
+    <% when 2 %>
+      <p><i class="fas fa-crown" style="color:#7c5830"></i> <%= i + 1 %>位</p>
+    <% else %>
+      <p><%= i + 1 %>位</p>
+    <% end %>
+  </div>
+  <%= render partial: "post",  locals: { post: post } %>
+<% end %>

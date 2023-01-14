@@ -1,0 +1,10 @@
+.lanking_box {
+  margin-top: 30px;
+}
+.lanking_box p {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.lanking_box + .post__container {
+  margin-top: 0;
+}

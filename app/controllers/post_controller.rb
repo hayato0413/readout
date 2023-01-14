@@ -63,6 +63,10 @@ class PostController < ApplicationController
     @posts = Post.where(user_id: params[:id]).order(created_at: :desc)
   end
 
+  def lanking
+    @posts = Post.lanking
+  end
+
 
   private
     def post_params

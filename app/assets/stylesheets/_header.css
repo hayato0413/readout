@@ -92,6 +92,9 @@
   list-style: square;
   color: white;
 }
+.nav-items__item:first-child {
+  margin-top: 50px;
+}
 .nav-items__item a {
   color: white;
   width: 100%;

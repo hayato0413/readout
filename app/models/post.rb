@@ -4,6 +4,10 @@ class Post < ApplicationRecord
     favorites.where(user_id: user.id).exists?
   end
 
+  def self.lanking 
+    Post.find(Favorite.group(:post_id).order("count(post_id) desc").limit(30).pluck(:post_id))
+  end
+
   def self.search(keyword)
     where(["title like? OR content like?", "%#{keyword}%", "%#{keyword}%"])
   end

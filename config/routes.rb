@@ -15,4 +15,5 @@ Rails.application.routes.draw do
   get "/post/category/:id",             to: 'post#category' ,        as: :post_category
   get "/post/:id/favorites_list",       to: 'post#favorite',         as: :post_favorite
   get 'search',                         to: 'post#search',           as: :post_search
+  get '/lanking',                       to: 'post#lanking',          as: :post_lanking
 end
