@@ -54,7 +54,9 @@
       </div>
       <div class="post_show-category-box">
         <% @post.categories.each do |category| %>
-          <p>#<%= category.name %></p>
+          <%= link_to "/post/category/#{category.id}" do %>
+            <p>#<%= category.name %></p>
+          <% end %>
         <% end %>
       </div>
     </div>

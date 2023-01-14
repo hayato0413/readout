@@ -72,7 +72,9 @@
   margin-right: 10px;
   white-space: nowrap;
 }
-
+.post_show-category-box p:hover {
+  opacity: 0.5;
+}
 .post_show-border {
   border-top: 1px solid #dcdcdc;
   border-bottom: 1px solid #dcdcdc;
@@ -86,6 +88,9 @@
   /* font-size: 1.1em; */
   font-weight: bold;
   padding-left: 5px;
+}
+.favorite-box p:hover {
+  opacity: 0.5;
 }
 
 
