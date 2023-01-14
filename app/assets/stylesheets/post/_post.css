@@ -5,7 +5,6 @@
 }
 .post__content-url:hover .post__container{
   border-color: #00cc99;
-  opacity: 0.5;
 }
 
 
@@ -68,6 +67,16 @@
   color: #00cc99;
 }
 
+/* お気に入り */
+.post__favorite-section {
+  text-align: right;
+  font-weight: bold;
+}
+.post__favorite-section span {
+  margin-right: 5px;
+  color: crimson;
+}
+
 
 
 @media screen and (max-width: 750px) {
@@ -83,6 +92,10 @@
   }
   .post__evaluation-section {
     white-space: nowrap;
+    text-align: center;
+  }
+  .post__favorite-section {
+    margin-top: 20px;
     text-align: center;
   }
 

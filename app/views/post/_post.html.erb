@@ -35,6 +35,9 @@
           <p># <%= category.name %></p>
         <% end %>
       </div>
+      <div class="post__favorite-section">
+        <p><span>❤︎</span><%= post.favorites.count %></p> 
+      </div>
     </div>
   <% end %>
 </div>
