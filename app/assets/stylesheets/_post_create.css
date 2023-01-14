@@ -27,6 +27,9 @@
   justify-content: space-between;
   margin-bottom: 40px;
 }
+.readout__title-section .readout__title h2{
+  border-bottom: 4px solid #00CC99;
+}
 .readout__cancel-btn a {
   font-size: 1.5rem;
   cursor: pointer;

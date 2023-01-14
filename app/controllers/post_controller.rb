@@ -60,7 +60,7 @@ class PostController < ApplicationController
   end
 
   def post_user 
-    @posts = Post.where(user_id: current_user.id).order(created_at: :desc)
+    @posts = Post.where(user_id: params[:id]).order(created_at: :desc)
   end
 
 

@@ -2,6 +2,7 @@
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+  margin-bottom: 30px;
 }
 .post_show-title .content__title  {
   margin-bottom: 30px;
@@ -28,9 +29,16 @@
   display: flex;
   align-items: center;
   margin-top: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
+.post__user-row .post__user-name a {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #dcdcdc;
+}
+.post__user-row .post__user-name a:hover {
+  opacity: 0.5;
+}
 
 .post_show-author {
   display: flex;
