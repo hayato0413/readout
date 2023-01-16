@@ -2,17 +2,36 @@
   <h1>ランキング</h1>
   <% content_for(:html_title) { 'ランキング - Read Out' } %>
 </div>
-<% @posts.each_with_index do |post, i| %>
-  <% index = post.favorites.count %>
+<% lastFavorite = 0 %>
+<% j = 1 %>
+<% @posts.each.with_index(1) do |post, i| %>
+  <% if i == 1 %>
+    <% lastFavorite = post.favorites.count%>
+  <% end %>
   <div class="lanking_box">
-    <% case i when 0 %>
-      <p><i class="fas fa-crown" style="color:gold"></i> <%= i + 1 %>位</p>
-    <% when 1 %>
-      <p><i class="fas fa-crown" style="color:silver"></i> <%= i + 1 %>位</p>
-    <% when 2 %>
-      <p><i class="fas fa-crown" style="color:#7c5830"></i> <%= i + 1 %>位</p>
+    <% if post.favorites.count != lastFavorite %>
+      <% j = i %>
+      <% case i when 1 %>
+        <p><i class="fas fa-crown" style="color:gold"></i> <%= i %>位</p>
+      <% when 2 %>
+        <p><i class="fas fa-crown" style="color:silver"></i> <%= i  %>位</p>
+      <% when 3 %>
+        <p><i class="fas fa-crown" style="color:#7c5830"></i> <%= i  %>位</p>
+      <% else %>
+        <p><%= i %>位</p>
+      <% end %> 
+      <% lastFavorite = post.favorites.count %>
     <% else %>
-      <p><%= i + 1 %>位</p>
+      <% case j when 1 %>
+        <p><i class="fas fa-crown" style="color:gold"></i> <%= j %>位</p>
+      <% when 2 %>
+        <p><i class="fas fa-crown" style="color:silver"></i> <%= j  %>位</p>
+      <% when 3 %>
+        <p><i class="fas fa-crown" style="color:#7c5830"></i> <%= j  %>位</p>
+      <% else %>
+        <p><%= j %>位</p>
+      <% end %>
+      <% lastFavorite = post.favorites.count %> 
     <% end %>
   </div>
   <%= render partial: "post",  locals: { post: post } %>
