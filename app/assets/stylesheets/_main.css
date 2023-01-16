@@ -20,17 +20,20 @@
 }
 .content_explanation {
   background-color: #00cc99;
-  border-bottom: 1px solid #DCDCDC;
   text-align: center;
   padding: 4px;
   font-size: 1.2rem;
   color: white;
+  margin: 0 12vw;
 }
 
 
 @media screen and (max-width: 1230px) {
   .main__container {
     padding: 0;
+  }
+  .content_explanation {
+    margin: 0;
   }
   .sidebar__container {
     flex: 0 0 80px;
