@@ -20,8 +20,9 @@
 }
 .content_explanation {
   background-color: #00cc99;
+  border-bottom: 1px solid #DCDCDC;
   text-align: center;
-  padding: 3px;
+  padding: 4px;
   font-size: 1.2rem;
   color: white;
 }

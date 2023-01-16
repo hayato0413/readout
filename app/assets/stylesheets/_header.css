@@ -66,11 +66,12 @@
   right: -1%;
   top: 100px;
   width: 15%;
-  height: calc(100% - 100px);
+  height: 100vh;
   transform: translateX(100%);
   background-color: #00CC99;
   transition: ease .4s;
-  border: 1px solid #dcdcdc;
+  border-left: 1px solid #dcdcdc;
+  border-right: 1px solid #dcdcdc;
   padding-top: 50px;
   z-index: 2;
 }
