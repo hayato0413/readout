@@ -3,6 +3,7 @@
   flex-direction: column;
 }
 footer {  
+  z-index: 10;
   width: 100%;
   text-align: center;
   background-color: #444444;
