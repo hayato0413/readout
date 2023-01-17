@@ -26,12 +26,6 @@
   color: white;
   margin: 0 12vw;
 }
-.content_explanation span {
-  background-color: red;
-  width: 30px;
-  height: 100px;
-  text-align: right;
-}
 
 
 @media screen and (max-width: 1230px) {
