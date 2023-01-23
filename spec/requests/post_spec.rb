@@ -124,6 +124,21 @@ RSpec.describe "Posts", type: :request do
     end
   end
 
+  describe 'GET #lanking' do 
+    context 'ログインしている場合' do
+      it '正常にページが開けること' do   
+        get post_lanking_path
+        expect(response).to have_http_status 302
+      end
+    end
+    context 'ログインしていない場合' do 
+      it '正常にページが開けること' do 
+        get post_lanking_path
+        expect(response).to have_http_status 302
+      end
+    end
+  end
+
   describe 'POST #create' do 
     context 'ログインしている場合' do
       it '正常に投稿を保存できること' do

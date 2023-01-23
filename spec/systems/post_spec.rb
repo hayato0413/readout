@@ -106,4 +106,58 @@ RSpec.describe 'Posts', type: :system do
     end
   end
 
+  describe 'ランキング' do 
+    before do 
+      @other_user1 = FactoryBot.create(:user)
+      @other_user2 = FactoryBot.create(:user)
+      @other_post1 = FactoryBot.create(:post, user_id: @user.id)
+      @other_post2 = FactoryBot.create(:post, user_id: @user.id)
+
+      FactoryBot.create(:favorite, post: @post, user: @user)
+      FactoryBot.create(:favorite, post: @post, user: @other_user1)
+      FactoryBot.create(:favorite, post: @post, user: @other_user2)
+
+      FactoryBot.create(:favorite, post: @other_post1, user: @user)
+      FactoryBot.create(:favorite, post: @other_post1, user: @other_user1)
+
+      FactoryBot.create(:favorite, post: @other_post2, user: @user)
+    end
+    context "同率のお気に入り数がない場合" do 
+      before do 
+        visit post_lanking_path
+      end
+      it "一番上が1位であること" do 
+        within find(".lanking_box_1") do 
+          expect(page).to have_content "1位"
+        end
+      end
+      it "二番目が2位であること" do 
+        within find(".lanking_box_2") do 
+          expect(page).to have_content "2位"
+        end
+      end
+      it "三番目が3位であること" do 
+        within find(".lanking_box_3") do 
+          expect(page).to have_content "3位"
+        end
+      end
+    end
+    context "同率のお気に入り数がある場合" do 
+      before do 
+        FactoryBot.create(:favorite, post: @other_post1, user: @other_user2)
+        visit post_lanking_path
+      end
+      it "同率の場合、二番目も1位であること" do 
+        within find(".lanking_box_2") do 
+          expect(page).to have_content "1位" 
+        end
+      end
+      it "上の位が同率の場合、間の順位を飛ばして位がついてること" do 
+        within find(".lanking_box_3") do 
+          expect(page).to have_content "3位"
+        end
+      end
+    end
+
+  end
 end

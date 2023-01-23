@@ -8,7 +8,7 @@
   <% if i == 1 %>
     <% lastFavorite = post.favorites.count%>
   <% end %>
-  <div class="lanking_box">
+  <div class="lanking_box_<%= i %> lanking_box">
     <% if post.favorites.count != lastFavorite %>
       <% j = i %>
       <% case i when 1 %>
