@@ -1,10 +1,9 @@
 class Post < ApplicationRecord
-
   def favorite?(user)
     favorites.where(user_id: user.id).exists?
   end
 
-  def self.lanking 
+  def self.lanking
     Post.find(Favorite.group(:post_id).order("count(post_id) desc").limit(30).pluck(:post_id))
   end
 
@@ -23,6 +22,5 @@ class Post < ApplicationRecord
   validates :content, presence: true, length: { maximum: 150 }
   validates :author, length: { maximum: 20 }
   validates :publish, length: { maximum: 20 }
-  validates :evaluation, presence: true, numericality: { greater_than: 0,less_than: 6 }
-
+  validates :evaluation, presence: true, numericality: { greater_than: 0, less_than: 6 }
 end

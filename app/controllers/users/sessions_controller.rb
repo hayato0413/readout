@@ -22,7 +22,7 @@ class Users::SessionsController < Devise::SessionsController
     user = User.guest
     if sign_in user
       redirect_to post_index_path, notice: 'ゲストユーザーとしてログインしました。'
-    else 
+    else
       redirect_to post_index_path, alert: 'ゲストユーザーとしてログインできませんでした'
     end
   end
