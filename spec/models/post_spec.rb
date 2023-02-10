@@ -39,11 +39,11 @@ RSpec.describe Post, type: :model do
         end
       end
 
-      context '151文字以上の場合' do
+      context '501文字以上の場合' do
         it 'バリデーションエラーが出ること' do
-          @post.content = ('a' * 151)
+          @post.content = ('a' * 501)
           @post.valid?
-          expect(@post.errors.full_messages).to include "レビューは150文字以内で入力してください"
+          expect(@post.errors.full_messages).to include "レビューは500文字以内で入力してください"
         end
       end
     end
