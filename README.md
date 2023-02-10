@@ -8,7 +8,7 @@
 
 本を読んだ記録をつけるものとしても利用もできます。
 
-### サービスの作ろうと思ったキッカケ
+## サービスの作ろうと思ったキッカケ
 
 本屋に立ち寄った時、私はいつも最初に漫画コーナーに向かいます。<br>
 そして面白そうなものに目をつけて、次にビジネス書が集まる場所を一通り見ます。<br>
@@ -37,50 +37,50 @@
 <br>
 
 | トップページ | 新規登録 |
-| :-- | :-- |
-| <img src="https://i.gyazo.com/bc5910cfaa51b6caefeafbadcd67c71a.png" width="320"> | <img src="https://i.gyazo.com/77716709845738691daaccab5e35e8ed.png" width="320"> |
+| :----------| :---------- |
+| <img src="https://i.gyazo.com/bc5910cfaa51b6caefeafbadcd67c71a.png"> | <img src="https://i.gyazo.com/77716709845738691daaccab5e35e8ed.png"> |
 | 最新の投稿がトップページが表示されます。<br>左のサイドメニューから各種機能へアクセスすることができます。<br>画面右上からログイン・新規登録を行えます。| 名前・メールアドレス・パスワードを登録として必要します。<br>ゲストログインは、登録画面下のリンクから行えます。|
 
 <br>
 
 | ログイン | アカウントメニュー |
-| :-- | :-- |
-| <img src="https://i.gyazo.com/203357909a1ef379faff9a58f6d12d1c.png" width="320"> | <img src="https://i.gyazo.com/de42b127ca4958fc2a1a43ba6006b0b3.png" width="320"> |
+| :----------| :---------- |
+| <img src="https://i.gyazo.com/203357909a1ef379faff9a58f6d12d1c.png"> | <img src="https://i.gyazo.com/de42b127ca4958fc2a1a43ba6006b0b3.png"> |
 | ログインには、メールアドレス・パスワードを必要とします。 | 画面上、右のハンバーガーメニューからアカウントに関するメニューが開きます。<br>ログアウトもここから行います。|
 
 <br>
 
 | ランキング | 本を探す |
 | :-- | :-- |
-| <img src="https://i.gyazo.com/c1611d952c8573960260af037618cf24.png" width="320"> | <img src="https://i.gyazo.com/425d87228fcf08ca038751bedad64774.png" width="320"> |
+| <img src="https://i.gyazo.com/c1611d952c8573960260af037618cf24.png"> | <img src="https://i.gyazo.com/425d87228fcf08ca038751bedad64774.png"> |
 | お気に件数の多い順に投稿が表示されます。 | 作品名や内容での検索、カテゴリー別検索を行うことができます。 |
 
 <br>
 
 | 投稿詳細 | 投稿方法 |
 | :-- | :-- |
-| <img src="https://i.gyazo.com/2227240e73bf445a97c6e23b2360c8de.png" width="320"> | <img src="https://i.gyazo.com/bffecc0d26a8e4a9ff8b4f335a94612c.png" width="320"> |
+| <img src="https://i.gyazo.com/2227240e73bf445a97c6e23b2360c8de.png"> | <img src="https://i.gyazo.com/bffecc0d26a8e4a9ff8b4f335a94612c.png"> |
 | 詳しく見たい投稿をクリックすることで、投稿詳細画面に遷移します。<br>この画面で著者・出版社が確認でき、自分の投稿の場合編集や削除リンクが表示されます。<br>また、投稿者のアカウントタップすると投稿者の投稿一覧画面へと遷移します。 | サイバー下のリードアウトボタンをタップすることで、投稿画面が開きます。<br>各種情報を入力し投稿ボタンを押し完了です。<br>※のついた欄は、入力必須の項目です。|
 
 <br>
 
 | お気に入り方法 | お気に入り一覧 |
 | :-- | :-- |
-| <img src="https://i.gyazo.com/0dd0282c07da907fbde41c61d9812956.png" width="320"> | <img src="https://i.gyazo.com/46007171e71afce7d2c932d04838da1d.jpg" width="320"> |
+| <img src="https://i.gyazo.com/0dd0282c07da907fbde41c61d9812956.png"> | <img src="https://i.gyazo.com/46007171e71afce7d2c932d04838da1d.jpg"> |
 | 投稿詳細画面の下、ハートを押すことでお気に入りすることができ、お気に入り済みをタップすると解除できる。 | サイバー三番目からお気に入りした投稿一覧が表示できます。 |
 
 <br>
 
 | 投稿一覧 | アカウント詳細 |
 | :-- | :-- |
-| <img src="https://i.gyazo.com/8bc578eeec1ea360550a1074db919e4f.png" width="320"> | <img src="https://i.gyazo.com/cbb82f29391adbd85d0900a5e87f7f4e.png" width="320"> |
+| <img src="https://i.gyazo.com/8bc578eeec1ea360550a1074db919e4f.png"> | <img src="https://i.gyazo.com/cbb82f29391adbd85d0900a5e87f7f4e.png"> |
 | アカウントメニューの1番目から自分の投稿一覧を表示できます。| アカウントメニューからアカウント詳細を表示できます。<br>アカウントの詳細情報を確認でき、編集を押すと編集画面へと遷移します。 |
 
 <br>
 
 | アカウント編集| 投稿編集|
 | :-- | :-- |
-| <img src="https://i.gyazo.com/90e5b595047aec7dec4786cb0354fc42.png" width="320"> | <img src="https://i.gyazo.com/9ee953a81eee65e8a65a0270439ab10e.png" width="320"> |
+| <img src="https://i.gyazo.com/90e5b595047aec7dec4786cb0354fc42.png"> | <img src="https://i.gyazo.com/9ee953a81eee65e8a65a0270439ab10e.png"> |
 | アカウントメニュー・詳細から編集へ移動できます。<br>更新した情報だけ入力をし、更新前のパスワードを最後に入力し更新ボタンで編集を行えます。| 投稿詳細画面から移動でき、各種情報を編集することができます。<br>必須項目は変わらず、各種情報を入力がスクロール下の編集ボタンから完了できます。|
 
 <br>
